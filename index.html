@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="fashionista.css">
+    <link rel="icon" href="images/tabicon-01.png" type="img/x-icon">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js"></script>
+    <title>Fashionista-Home</title>
+</head>
+<body>
+    <header>
+        <div class="container1">
+            <div class="logo">
+                <img src="images/ologow-01.png">
+                <nav class="main-nav">
+                    <div class="searchbar">
+                        <input type="text" class="search" placeholder="Search our store">
+                        
+                        <a href="index.html">HOME</a>
+                        <a href="shirts.html">SHIRTS</a>
+                        <a href="tshirts.html">T-SHIRTS</a>
+                        <a href="trousers.html">TROUSERS</a>
+                        <a href="footwear.html">FOOTWEAR</a>
+                        <a href="watches.html">WATCHES</a>
+                        <button class="login">login</button>
+                        
+                    </div>
+                </nav>
+            </div>
+            <hr class="divider">
+        </div>
+    </header>
+
+    <div class="container2">
+        <div class="slides">
+            <img src="images/watch banner-01.png" >
+        </div>
+        <div class="slides">
+            <img src="images/shirt banner-01.png">
+        </div>
+        <div class="slides">
+            <img src="images/shoe banner-01.png">
+        </div>
+        <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+        </div>
+          <script>
+            let slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+              let i;
+              let slides = document.getElementsByClassName("slides");
+              let dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 4000);
+            }
+          </script>
+    </div>
+    <div class="container3">
+        <div class="new">NEW ARRIVALS</div>
+        <div class="new_images">
+            <img src="images/black watch banner-01.png" >
+            <img src="images/grey watch banner-01.png" >
+            <img src="images/white watch banner-01.png" >
+        </div>
+    </div>
+    <div class="container4">
+        <div class="pop">POPULAR</div>
+        <div class="popular_images">
+            <img src="images/banner watch1-01.png" >
+            <img src="images/banner shirt-01.png" >
+            <img src="images/banner watch2-01.png" >
+        </div>
+    </div>
+    <div class="footer">
+        <div class="c">&copy 2003-2022 fashionista, Inc.</div>
+    </div>
+</body>
+
+
+</html>
